@@ -10,6 +10,19 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  color: #3b1c11;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.55;
 }
 
 img {
@@ -24,7 +37,7 @@ a {
 }
 
 .container {
-  max-width: 970px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -33,6 +46,7 @@ nav {
   width: 100%;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .nav {
@@ -136,13 +150,127 @@ table tr:hover {
   align-items: center;
 }
 
-.seccion-hotel-turismo h2 {
-  text-align: center;
-  font-weight: 400;
-  font-size: 2.5rem;
+.seccion-hotel-turismo img {
+  width: 25rem;
 }
 
-.seccion-hotel-turismo img {
-  margin-top: 2rem;
-  width: 25rem;
+.seccion-hotel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descripcion {
+  max-width: 70%;
+  margin-bottom: 1rem;
+}
+
+.descripcion p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.datos {
+  background-color: #edd9d3;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.datos p {
+  text-align: center;
+  margin-bottom: .5rem;
+  color: #3b1c11;
+}
+
+.datos p:last-child {
+  margin-bottom: 0;
+}
+
+.datos a {
+  font-size: 1rem;
+  color: #a97c6c;
+}
+
+.datos a:hover {
+  color: #6e493b;
+  text-decoration: underline;
+}
+
+.galeria {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.img-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(1);
+  box-shadow: 0 2px 3px rgb(0 0 0 / 20%);
+  transition: 100ms ease;
+  cursor: pointer;
+}
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgb(0 0 0 / 30%);
+}
+
+.servicios {
+  background-color: #edd9d3;
+  width: 70%;
+  padding: 2.5rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #3b1c11;
+}
+
+.servicios .titulo {
+  font-weight: 500;
+  margin-bottom: .75rem;
+}
+
+.servicios ul {
+  margin-left: 1.15rem;
+}
+
+.video {
+  aspect-ratio: 16/9;
+  width: 65%;
+  background-color: #40302a;
+  position: relative;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.video .video-title {
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+.video .play-svg {
+  width: 10%;
+  filter: invert(1);
 }
