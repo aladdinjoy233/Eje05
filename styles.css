@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
+/* Global styles */
 body::-webkit-scrollbar {
   width: .65rem;
 }
@@ -52,6 +53,8 @@ a {
   max-width: 1080px;
   margin: 0 auto;
 }
+
+/* Nav */
 
 nav {
   background-color: #972700;
@@ -118,6 +121,13 @@ nav {
   filter: invert(1);
 }
 
+.sub-nav {
+  position: absolute;
+  display: none;
+}
+
+/* Main (Table and hotels) */
+
 table {
   border-collapse: collapse;
   width: 80%;
@@ -147,19 +157,13 @@ table tr:hover {
   background-color: #ddd;
 }
 
-.linea-separador {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  width: 100%;
-  height: 0.5rem;
-  background-color: #972700;
-}
-
 .seccion-hotel-turismo {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10rem;
+  margin-top: 10rem;
 }
 
 .seccion-hotel-turismo img {
@@ -170,6 +174,22 @@ table tr:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  margin-bottom: 10rem;
+}
+
+.seccion-hotel:last-child {
+  margin-bottom: 0;
+}
+
+.seccion-hotel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.4rem;
+  background-color: #972700;
+  top: -4.5rem;
+  border-radius: 5rem;
 }
 
 .descripcion {
@@ -228,6 +248,7 @@ table tr:hover {
   box-shadow: 0 2px 3px rgb(0 0 0 / 20%);
   transition: 100ms ease;
   cursor: pointer;
+  height: 11.5rem;
 }
 
 .img-card img {
@@ -285,4 +306,127 @@ table tr:hover {
 .video .play-svg {
   width: 10%;
   filter: invert(1);
+}
+
+/* Ending */
+.gracias {
+  background-image: url("img/parallax-bg.jpg");
+  background-attachment: fixed;
+  padding: 3rem;
+}
+
+.gracias h2,
+.gracias p {
+  color: white;
+  text-align: center;
+}
+
+.gracias h2 {
+  font-weight: 500;
+}
+
+.gracias .tinogasta-img {
+  width: 100%;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.accesos {
+  margin: 3rem 0;
+}
+
+.accesos h2{
+  font-weight: 400;
+  font-size: 2rem;
+  color: #972700;
+}
+
+.accesos .card-container {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.accesos .card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.accesos .card:hover .icon-div {
+  background-color: #b67661;
+}
+
+.accesos .card h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #972700;
+}
+
+.accesos .card p {
+  font-size: 0.875rem;
+  color: #c48e7c;
+}
+
+.accesos .card .icon-div {
+  width: 4.375rem;
+  height: 4.375rem;
+  background-color: #972700;
+  transition: 150ms ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accesos .card .icon-div img {
+  filter: invert(1);
+  width: 50%;
+}
+
+.visite-la-pagina {
+  background-color: #972700;
+  padding: 2rem;
+}
+
+.visite-la-pagina .flex-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.visite-la-pagina .flex-div .left {
+  width: 50%;
+}
+
+.visite-la-pagina h2, 
+.visite-la-pagina p {
+  color: white;
+  text-align: left;
+  font-weight: 400;
+}
+
+.visite-la-pagina h2 {
+  margin-bottom: .5rem;
+}
+
+.visite-la-pagina p {
+  margin: 0;
+}
+
+.visite-la-pagina .btn {
+  font-size: 1.25rem;
+  display: inline-block;
+  padding: 1em 1.5em;
+  border-radius: 5rem;
+  border: 2px solid white;
+  font-weight: 500;
+  transition: 150ms ease;
+}
+
+.visite-la-pagina .btn:hover {
+  background-color: white;
+  color: #972700;
 }
