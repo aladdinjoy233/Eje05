@@ -633,11 +633,11 @@ cc p {
 }
 
 footer {
-  height: 10rem;
+  height: 8rem;
   background-color: black;
 }
 
-.container {
+footer .container {
   display: flex;
   height: 100%;
   justify-content: space-between;
@@ -653,6 +653,10 @@ footer ul {
 
 footer .left-side {
   color: white;
+}
+
+footer .left-side p {
+  margin-bottom: 0;
 }
 
 footer .left-side span {
