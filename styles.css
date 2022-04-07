@@ -326,9 +326,16 @@ table tr:hover {
 }
 
 .gracias .tinogasta-img {
-  width: 100%;
+  width: 75%;
   height: 15rem;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gracias .tinogasta-img img {
+  max-width: 100%;
+  height: auto;
 }
 
 .accesos {
@@ -430,3 +437,233 @@ table tr:hover {
   background-color: white;
   color: #972700;
 }
+
+.seccion-galeria {
+  padding: 3rem 0;
+  background-color: #edd9d3;
+}
+
+.seccion-galeria .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seccion-galeria .info p,
+.seccion-galeria .info h2 {
+  text-align: center;
+  color: #972700;
+  font-weight: 400;
+}
+
+.seccion-galeria .info p {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50rem;
+}
+
+.info .btn-container .btn-fill{
+  display: inline-block;
+  padding: .75em 1.2em;
+  border-radius: 5rem;
+  background-color: #972700;
+  transition: 100ms ease;
+  font-weight: 500;
+}
+
+.info .btn-container .btn-fill:first-child {
+  margin-right: 1rem;
+}
+
+.info .btn-container .btn-fill:hover {
+  background-color: #3b1c11;
+}
+
+.galeria-de-imagenes {
+  margin-top: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.galeria-de-imagenes .img-div {
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;;
+}
+
+.img-div img{
+  display: block;
+}
+
+.img-div .explicacion {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000000;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transition: 150ms ease;
+  color: white;
+}
+
+.img-div .explicacion .contenido {
+  text-align: center;
+}
+
+.img-div .explicacion h6 {
+  font-size: 1.875rem;
+  margin-bottom: none;
+}
+
+.img-div .explicacion p {
+  font-size: 1rem;
+}
+.img-div:hover .explicacion {
+  background-color: #00000085;
+  opacity: 1;
+}
+
+.prestadores-turisticos {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.prestadores-turisticos h2 {
+  font-weight: 400;
+  color: #972700;
+}
+
+.galeria-prestadores {
+  display: flex;
+}
+
+.card-link {
+  text-align: center;
+  transition: 150ms ease;
+}
+
+.card-link:hover {
+  background-color: #972700;
+}
+
+.card-link h4{
+  color: #4b1c0c;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.card-link p{
+  color: #964226;
+  font-size: 1.1rem;
+}
+
+.card-link:hover h4,
+cc p {
+  color: white;
+}
+
+.card-img {
+  position: relative;
+}
+
+.card-img .img-overlay {
+  background-color: rgb(0 0 0 / 85%);
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 150ms ease;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.card-link:hover .img-overlay {
+  opacity: 1;
+}
+
+.card-img img {
+  display: block;
+}
+
+.contacto {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #edd9d3;
+  color: #964226;
+}
+
+.contacto .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto h2 {
+  font-weight: 400;
+}
+
+.contacto ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+
+.contacto ul img {
+  width: 2rem;
+  height: 2rem;
+  filter: invert(26%) sepia(89%) saturate(695%) hue-rotate(337deg) brightness(95%) contrast(87%);
+}
+
+.contacto ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer {
+  height: 10rem;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+footer .left-side {
+  color: white;
+}
+
+footer .left-side span {
+  color: #964226;
+}
+
+footer ul a {
+  transition: 100ms ease;
+}
+
+footer ul a:hover {
+  color: #964226;
+}
+
